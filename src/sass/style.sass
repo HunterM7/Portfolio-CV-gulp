@@ -1,0 +1,196 @@
+@import 'normalize'
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap')
+
+// Colors
+
+$White: #FAFAFA
+$Black: #141C33
+$Blue: #3778FC
+$BlueDark: #0370FF
+$Purple: #6C48D3
+$PurpleDark: #4D4DE2
+$Gradient: linear-gradient(135deg, $Purple 0%, $PurpleDark 30%, $Blue 80%, $BlueDark 100%)
+
+$transition2s: 0.2s ease
+
+// ---------------------------------------------
+
+// Common
+
+html
+	font-size: 10px
+
+	overflow: hidden
+
+body
+	font-family: 'Poppins', sans-serif
+	font-size: 1.8rem
+	font-weight: 500
+	line-height: 1
+	letter-spacing: 0.1rem
+	color: $White
+
+	background: $Gradient
+
+	position: relative
+
+.container
+	max-width: 112.2rem
+	padding: 0 1.6rem
+	margin: 0 auto
+
+h1
+	font-size: 6.4rem
+
+h2
+	font-size: 4.8rem
+
+h3
+	font-size: 3.6rem
+
+h4
+	font-size: 2.4rem
+
+h5
+	font-size: 1.8rem
+
+h1, h2, h3, h4, h5
+	font-weight: 700
+	color: $White
+
+p
+	font-size: 1.8rem
+	font-weight: 500
+	line-height: 1.55
+	letter-spacing: 0.1rem
+
+.btn
+	font-size: 18px
+	font-weight: 700
+	letter-spacing: 0.04rem
+	color: $White
+
+	background-color: transparent
+
+	border: 2px solid $White
+	border-radius: 0.4rem
+
+	padding: 8px 24px
+
+	transition: $transition2s
+
+	&:hover
+		color: $Black
+		background-color: $White
+
+// ---------------------------------------------
+
+// Header
+
+header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+
+	width: 100%
+
+.header
+	max-width: 134.4rem
+	margin: 0 auto
+	padding: 1.65rem 1.6rem
+
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&__logo
+		display: block
+		width: 4.5rem
+		height: 4.5rem
+
+		background-image: url('../img/logo.svg')
+		background-size: contain
+		background-position: center
+		background-repeat: no-repeat
+
+		border-radius: 50%
+nav
+	display: block
+.navigation
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&__item
+		margin-left: 22px
+
+		position: relative
+
+		&:first-child
+			margin-left: 0
+
+		&::after
+			content: ""
+			width: 100%
+			height: 0.1rem
+
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+
+			background-color: $White
+
+			opacity: 0
+
+		&.active::after
+			opacity: 1
+
+	&__link
+		letter-spacing: 0.06rem
+
+@media ( max-width:  768px)
+	.header
+		nav
+			display: none
+
+@media ( max-width:  375px)
+	.header__btn
+		color: $Black
+		border-color: $Black
+
+// ---------------------------------------------
+
+// About me
+.about-me
+	margin-top: 80px
+	padding-top: 80px
+
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__info
+		max-width: 58rem
+
+		h1
+			margin-bottom: 1rem
+
+		h4
+			margin-bottom: 1rem
+
+	.links
+		&__box
+			display: flex
+
+	&__photo
+		img
+			border-radius: 50%
+			df	
+			
+			
+
+// ---------------------------------------------	
