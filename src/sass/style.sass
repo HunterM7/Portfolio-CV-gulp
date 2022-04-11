@@ -32,7 +32,9 @@ body
 	letter-spacing: 0.1rem
 	color: $White
 
-	background: $Gradient
+	background-image: $Gradient
+
+	position: relative
 
 .container
 	max-width: 112.2rem
@@ -101,6 +103,18 @@ p
 	to
 		opacity: 1
 		top: 0px
+
+// ---------------------------------------------
+
+// Background
+
+.background
+	position: absolute
+	top: 0
+	bottom: 0
+	margin: 0 auto
+
+	&__img
 
 // ---------------------------------------------
 
@@ -199,7 +213,7 @@ nav
 
 // About me
 .about-me
-	margin-top: 16rem
+	padding-top: 16rem
 
 	.container
 		display: flex

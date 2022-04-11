@@ -81,7 +81,8 @@ body {
   line-height: 1;
   letter-spacing: 0.1rem;
   color: #FAFAFA;
-  background: linear-gradient(135deg, #6C48D3 0%, #4D4DE2 30%, #3778FC 80%, #0370FF 100%);
+  background-image: linear-gradient(135deg, #6C48D3 0%, #4D4DE2 30%, #3778FC 80%, #0370FF 100%);
+  position: relative;
 }
 
 .container {
@@ -159,6 +160,16 @@ p {
     top: 0px;
   }
 }
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+.background__img {
+  transform: tra;
+}
+
 header {
   position: absolute;
   z-index: 100;
@@ -247,7 +258,7 @@ nav {
   }
 }
 .about-me {
-  margin-top: 16rem;
+  padding-top: 16rem;
 }
 .about-me .container {
   display: flex;
