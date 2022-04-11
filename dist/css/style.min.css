@@ -72,7 +72,6 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
   font-size: 10px;
-  overflow-x: hidden;
 }
 
 body {
@@ -126,7 +125,7 @@ p {
 }
 
 .btn {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 0.04rem;
   color: #FAFAFA;
@@ -141,7 +140,25 @@ p {
   background-color: #FAFAFA;
 }
 
-@keyframes;
+@media (max-width: 375px) {
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    top: -80px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
 header {
   position: absolute;
   z-index: 100;
@@ -149,7 +166,13 @@ header {
   left: 0;
   top: 0;
   right: 0;
-  transition: all 0.2s ease;
+}
+
+.header--scrolled {
+  position: fixed;
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  background: linear-gradient(180deg, rgb(77, 77, 226) 0%, rgba(55, 120, 252, 0.85) 70%, rgba(255, 255, 255, 0) 100%);
 }
 
 .header {
@@ -169,9 +192,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
-}
-.header--scrolled {
-  position: fixed;
 }
 
 nav {
@@ -214,6 +234,13 @@ nav {
   }
 }
 @media (max-width: 375px) {
+  .header {
+    padding: 0.8rem 3.6rem 0.8rem 1.6rem;
+  }
+  .header__logo {
+    width: 3.7rem;
+    height: 3.7rem;
+  }
   .header__btn {
     color: #141C33;
     border-color: #141C33;
@@ -242,20 +269,28 @@ nav {
   display: flex;
 }
 .about-me__photo img {
+  width: 100%;
   border-radius: 50%;
 }
 
 .links__box {
   display: flex;
 }
+.links__item {
+  width: 6.2rem;
+  height: 6.2rem;
+  margin-right: 17px;
+}
+.links__item:last-child {
+  margin-right: 0;
+}
 .links__item a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   display: block;
-  width: 6.2rem;
-  height: 6.2rem;
-  margin-right: 17px;
+  width: 100%;
+  height: 100%;
 }
 .links__item:first-child a {
   background-image: url("../img/icons/linkedin.svg");
@@ -271,7 +306,30 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .about-me {
+    margin-top: 10.5rem;
+  }
   .about-me .container {
     flex-direction: column-reverse;
+  }
+  .about-me__photo {
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 375px) {
+  .about-me {
+    margin-top: 10.5rem;
+  }
+  .about-me__photo {
+    width: 234px;
+    height: 234px;
+    margin-bottom: 2rem;
+  }
+  .about-me__info {
+    text-align: center;
+  }
+
+  .links__box {
+    justify-content: space-between;
   }
 }
