@@ -20,7 +20,7 @@ $transition2s: 0.2s ease
 html
 	font-size: 10px
 
-	overflow: hidden
+	overflow-x: hidden
 
 body
 	font-family: 'Poppins', sans-serif
@@ -31,8 +31,6 @@ body
 	color: $White
 
 	background: $Gradient
-
-	position: relative
 
 .container
 	max-width: 112.2rem
@@ -56,6 +54,8 @@ h5
 
 h1, h2, h3, h4, h5
 	font-weight: 700
+	line-height: 1.4
+	letter-spacing: 0
 	color: $White
 
 p
@@ -83,18 +83,22 @@ p
 		color: $Black
 		background-color: $White
 
+@keyframes
+
 // ---------------------------------------------
 
 // Header
 
 header
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
+	position: absolute
 	z-index: 100
 
 	width: 100%
+	left: 0
+	top: 0
+	right: 0
+
+	transition: all .2s ease
 
 .header
 	max-width: 134.4rem
@@ -116,6 +120,10 @@ header
 		background-repeat: no-repeat
 
 		border-radius: 50%
+
+	&--scrolled
+		position: fixed
+
 nav
 	display: block
 .navigation
@@ -165,22 +173,23 @@ nav
 
 // About me
 .about-me
-	margin-top: 80px
-	padding-top: 80px
+	margin-top: 16rem
 
 	.container
 		display: flex
 		justify-content: space-between
+		flex-direction: row
 		align-items: center
 
 	&__info
 		max-width: 58rem
 
-		h1
-			margin-bottom: 1rem
+		h2
+			margin-top: 0
+			margin-bottom: 1.2rem
 
 		h4
-			margin-bottom: 1rem
+			margin-bottom: 5rem
 
 	.links
 		&__box
@@ -190,4 +199,39 @@ nav
 		img
 			border-radius: 50%
 
-// ---------------------------------------------	
+.links
+
+	&__box
+		display: flex
+
+	&__item
+
+		a
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			display: block
+			width: 6.2rem
+			height: 6.2rem
+			margin-right: 17px
+
+		&:first-child
+			a
+				background-image: url('../img/icons/linkedin.svg')
+		&:nth-child(2)
+			a
+				background-image: url('../img/icons/dribbble.svg')
+
+		&:nth-child(3)
+			a
+				background-image: url('../img/icons/github.svg')
+
+		&:last-child
+			a
+				background-image: url('../img/icons/instagram.svg')
+
+@media ( max-width:  768px)
+	.about-me
+		.container
+			flex-direction: column-reverse
+// ---------------------------------------------
