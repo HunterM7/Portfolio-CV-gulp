@@ -18,8 +18,8 @@ $transition2s: 0.2s ease
 
 // Common
 
-// html, body
-// 	overflow-x: hidden
+html, body
+	overflow-x: hidden
 
 html
 	font-size: 10px
@@ -109,13 +109,23 @@ p
 // Background
 
 .background
-	position: absolute
 	top: 0
 	bottom: 0
-	margin: 0 auto
+	z-index: -100
+
+	.container
+		margin: 0 auto
+		position: relative
+
+		z-index: inherit
 
 	&__img
+		position: absolute
+		right: 0
+		top: -45rem
+		transform: rotate(45deg)
 
+		z-index: inherit
 // ---------------------------------------------
 
 // Header
