@@ -7,14 +7,16 @@ html(lang="sp")
 		title Portfolio CV
 		link(rel="stylesheet", href="css/style.css")
 	body 
-		.background 
+		.background
+		.background-img
 			.container
-				img.background__img(src="@img/bg.svg", alt="bg")
+				img.background-img__img(src="@img/bg.svg", alt="bg")
 
 		include pug/header
 		include pug/hero
 		include pug/about-me
 		include pug/projects
+		include pug/contacts
 
 
 		script(src="js/app.min.js")

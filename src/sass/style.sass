@@ -18,9 +18,6 @@ $transition2s: 0.2s ease
 
 // Common
 
-html, body
-	overflow-x: hidden
-
 html
 	font-size: 10px
 
@@ -32,7 +29,7 @@ body
 	letter-spacing: 0.1rem
 	color: $White
 
-	background-image: $Gradient
+	// background-image: $Gradient
 
 	position: relative
 
@@ -66,26 +63,48 @@ p
 	font-size: 1.8rem
 	font-weight: 500
 	line-height: 1.55
-	letter-spacing: 0.1rem
+	letter-spacing: 0.07rem
 
 .btn
 	font-size: 1.8rem
 	font-weight: 700
-	letter-spacing: 0.04rem
+	letter-spacing: 0.07rem
 	color: $White
+
+	display: inline-block
+
+	cursor: pointer
 
 	background-color: transparent
 
 	border: 2px solid $White
 	border-radius: 0.4rem
 
-	padding: 8px 24px
+	padding: 8px 22px
 
 	transition: $transition2s
 
 	&:hover
 		color: $Black
 		background-color: $White
+
+.btn-link
+	padding-left: 48px
+	position: relative
+
+	&::before
+		content: ""
+		display: block
+		width: 1.7rem
+		height: 1.7rem
+		left: 2.4rem
+		top: 50%
+		transform: translateY(-50%)
+		position: absolute
+
+		background-image: url("../img/icons/link-icon.svg")
+		background-size: contain
+		background-repeat: no-repeat
 
 @media ( max-width:  375px)
 
@@ -109,8 +128,23 @@ p
 // Background
 
 .background
+	position: fixed
+
 	top: 0
-	bottom: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -100
+
+	background: $Gradient
+
+.background-img
+	position: absolute
+
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
 	z-index: -100
 
 	.container
@@ -331,7 +365,7 @@ nav
 	margin: 0 auto
 
 	&__info
-		letter-spacing: 0.07rem
+		// letter-spacing: 0.07rem
 		margin-right: 16px
 
 	&__img
@@ -378,6 +412,61 @@ nav
 		&:nth-child(5)
 			margin-top: 2.2rem
 			background-image: url("../img/skills/skill-5.svg")
+
+// ---------------------------------------------
+
+// Hero
+
+.h2__projects
+	margin-bottom: 5rem
+	text-align: center
+
+.project
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+
+	margin-bottom: 12rem
+
+	&__img
+		height: 30rem
+		margin-right: 16px
+		flex: 1 1 0
+		border-radius: 1rem
+
+	&__info
+		flex: 1 1 0
+
+	&__title
+		margin-bottom: 1.6rem
+
+	&__desc
+		margin-bottom: 3.2rem
+
+	&__btn
+		padding: 12px 22px 12px 46px
+
+	&:nth-child(2)
+		.project__img
+			background-image: url("../img/projects/project-1.jpg")
+
+	&:nth-child(3)
+		.project__img
+			background-image: url("../img/projects/project-2.jpg")
+
+	&:nth-child(4)
+		.project__img
+			background-image: url("../img/projects/project-3.jpg")
+
+	&:nth-child(odd)
+		flex-direction: row-reverse
+
+		.project__img
+			margin-right: 0
+
+		.project__info
+			margin-right: 1.6rem
 
 // ---------------------------------------------
 
