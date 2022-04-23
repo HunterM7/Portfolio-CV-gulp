@@ -269,29 +269,29 @@ nav {
     border-color: #141C33;
   }
 }
-.about-me {
+.hero {
   padding-top: 16rem;
 }
-.about-me .container {
+.hero .container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
 }
-.about-me__info {
+.hero__info {
   max-width: 58rem;
 }
-.about-me__info h2 {
+.hero__info h2 {
   margin-top: 0;
   margin-bottom: 1.2rem;
 }
-.about-me__info h4 {
+.hero__info h4 {
   margin-bottom: 5rem;
 }
-.about-me .links__box {
+.hero .links__box {
   display: flex;
 }
-.about-me__photo img {
+.hero__photo img {
   width: 100%;
   border-radius: 50%;
 }
@@ -329,30 +329,37 @@ nav {
 }
 
 @media (max-width: 768px) {
-  .about-me {
+  .hero {
     margin-top: 10.5rem;
   }
-  .about-me .container {
+  .hero .container {
     flex-direction: column-reverse;
   }
-  .about-me__photo {
+  .hero__photo {
     margin-bottom: 3rem;
   }
 }
 @media (max-width: 375px) {
-  .about-me {
+  .hero {
     margin-top: 10.5rem;
   }
-  .about-me__photo {
+  .hero__photo {
     width: 234px;
     height: 234px;
     margin-bottom: 2rem;
   }
-  .about-me__info {
+  .hero__info {
     text-align: center;
   }
 
   .links__box {
     justify-content: space-between;
   }
+}
+.info {
+  padding: 250px 0;
+}
+.info h2 {
+  text-align: center;
+  padding-bottom: 50px;
 }
