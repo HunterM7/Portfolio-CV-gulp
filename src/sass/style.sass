@@ -26,10 +26,8 @@ body
 	font-size: 1.8rem
 	font-weight: 500
 	line-height: 1
-	letter-spacing: 0.1rem
+	letter-spacing: 0.07rem
 	color: $White
-
-	// background-image: $Gradient
 
 	position: relative
 
@@ -202,6 +200,7 @@ header
 
 nav
 	display: block
+
 .navigation
 	display: flex
 	justify-content: center
@@ -350,7 +349,7 @@ nav
 
 // ---------------------------------------------
 
-// Hero
+// About me
 
 .info
 	padding: 250px 0
@@ -415,7 +414,7 @@ nav
 
 // ---------------------------------------------
 
-// Hero
+// Projects
 
 .h2__projects
 	margin-bottom: 5rem
@@ -456,6 +455,7 @@ nav
 			background-image: url("../img/projects/project-2.jpg")
 
 	&:nth-child(4)
+		margin-bottom: 0
 		.project__img
 			background-image: url("../img/projects/project-3.jpg")
 
@@ -470,6 +470,63 @@ nav
 
 // ---------------------------------------------
 
-// Hero
+// Contacts
+
+.contacts
+	padding: 10.2rem 0 8.8rem
+
+	&__container
+		max-width: 46rem
+
+	&__title
+		text-align: center
+		margin-bottom: 5.4rem
+
+form
+
+	label
+		font-size: 1.4rem
+		letter-spacing: 0
+		display: block
+
+		margin-bottom: 0.9rem
+
+	input
+		width: 100%
+		height: 4.8rem
+		margin-bottom: 2rem
+
+		padding: 1rem 1.6rem
+
+		border-radius: 0.6rem
+		border: 2px solid rgba($Black, 0.5)
+
+		&::placeholder
+			font-size: 20px
+			color: rgba($Black, 0.5)
+
+	textarea
+		width: 100%
+		height: 18rem
+		padding: 1rem 1.6rem
+		resize: none
+		border-radius: 0.6rem
+		border: 2px solid rgba($Black, 0.5)
+
+		margin-bottom: 4.8rem
+
+	button.btn
+		float: right
+		padding: 0.8rem 2.8rem
+
+// ---------------------------------------------
+
+// Footer
+
+footer
+	padding: 1.8rem 0
+
+	p
+		text-align: center
 
 // ---------------------------------------------

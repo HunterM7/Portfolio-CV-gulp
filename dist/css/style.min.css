@@ -79,7 +79,7 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.07rem;
   color: #FAFAFA;
   position: relative;
 }
@@ -480,6 +480,9 @@ nav {
 .project:nth-child(3) .project__img {
   background-image: url("../img/projects/project-2.jpg");
 }
+.project:nth-child(4) {
+  margin-bottom: 0;
+}
 .project:nth-child(4) .project__img {
   background-image: url("../img/projects/project-3.jpg");
 }
@@ -491,4 +494,54 @@ nav {
 }
 .project:nth-child(odd) .project__info {
   margin-right: 1.6rem;
+}
+
+.contacts {
+  padding: 10.2rem 0 8.8rem;
+}
+.contacts__container {
+  max-width: 46rem;
+}
+.contacts__title {
+  text-align: center;
+  margin-bottom: 5.4rem;
+}
+
+form label {
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+form input {
+  width: 100%;
+  height: 4.8rem;
+  margin-bottom: 2rem;
+  padding: 1rem 1.6rem;
+  border-radius: 0.6rem;
+  border: 2px solid rgba(20, 28, 51, 0.5);
+}
+form input::placeholder {
+  font-size: 20px;
+  color: rgba(20, 28, 51, 0.5);
+}
+form textarea {
+  width: 100%;
+  height: 18rem;
+  padding: 1rem 1.6rem;
+  resize: none;
+  border-radius: 0.6rem;
+  border: 2px solid rgba(20, 28, 51, 0.5);
+  margin-bottom: 4.8rem;
+}
+form button.btn {
+  float: right;
+  padding: 0.8rem 2.8rem;
+}
+
+footer {
+  padding: 1.8rem 0;
+}
+footer p {
+  text-align: center;
 }
