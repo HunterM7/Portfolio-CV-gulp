@@ -363,3 +363,23 @@ nav {
   text-align: center;
   padding-bottom: 50px;
 }
+
+.skills {
+  display: flex;
+}
+.skills__list {
+  display: flex;
+  justify-content: center;
+}
+.skills__item {
+  width: 75px;
+  height: 94px;
+  background-image: url("img/skills/skill-1.svg");
+  margin-right: 13px;
+}
+.skills__item:last-child {
+  margin-right: 0;
+}
+.skills__item:nth-child(1) {
+  background-image: url("img/skills/skill-1.svg");
+}
